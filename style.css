@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+	display: flex;
+	justify-content: center; 
+    align-items: center;
+	height: 100%;
+    margin: 0;
+ 
+}
+body.page0 {
+    background-image: url('1587646418_38-p-besshovnie-foni-dlya-saitov-112.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.page1 {
+    background-image: url('Screenshot 2025-03-24 183453.png');
+    background-size: cover;
+	background-position: center 20%;
+	min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+body.page2 {
+    background-image: url('Screenshot 2025-03-24 181838.png');
+    background-size: cover;
+	background-position: center 20%;
+    background-repeat: no-repeat;
+	height: 100%;
+	display: flex;
+	justify-content: center; 
+    align-items: center;
+}
+body.page3 {
+    background-image: url('1667678105850.jpg');
+    background-size: cover;
+	background-position: center 20%;
+    background-repeat: no-repeat;
+	height: 100%;
+
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.Cypher { background-color: #69f5af; color: white; }
+.Atbash { background-color: #f2798f; color: white; }
+.Vigenere { background-color: #ffc107; color: black; }
+
+.btn:hover {
+    transform: scale(1.1);
+}
