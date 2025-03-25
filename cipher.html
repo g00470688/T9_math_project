@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cypher Encryption</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page1">
+    <div class="container page1">
+        <h1>Caesar Encryption</h1>
+        <textarea id="inputText" placeholder="Input Text"></textarea>
+        <button onclick="encryptText()">Encrypt</button>
+		<br><br>
+        <textarea id="shiftValue" placeholder="input shift key"></textarea>
+        <button onclick="decryptText()">decrypt</button>
+		<br><br>
+        <h1 id="answer">The answer Goes Here!</h1>
+        <a href="index.html" class="home">Back to home page</a>
+    </div>
+</body>
+</html>
+<script>
+
+
+
+    function encryptText()
+    {
+        let shiftValue = document.getElementById("shiftValue").value;
+        let textInput = document.getElementById("inputText").value.toLowerCase();
+        let resultString= "";
+        let charcode;
+        for (let i = 0; i < textInput.length; i++)
+        {
+            charcode = textInput.charCodeAt(i);
+            console.log(charcode);
+            charcode += parseInt(shiftValue);
+            console.log(charcode);
+            if (charcode > 122)
+            {
+                charcode = 96 + (charcode - 122);
+            }
+            console.log(charcode);
+            resultString += String.fromCharCode(charcode);
+            console.log(resultString);
+        }
+        console.log(resultString);
+        document.getElementById("answer").innerHTML = resultString;
+    }
+
+    function decryptText()
+    {
+        let shiftValue = document.getElementById("shiftValue").value;
+        let textInput = document.getElementById("inputText").value.toLowerCase();
+        let resultString= "";
+        let charcode;
+        for (let i = 0; i < textInput.length; i++)
+        {
+            charcode = textInput.charCodeAt(i);
+            console.log(charcode);
+            charcode += (parseInt(shiftValue)* -1);
+            console.log(charcode);
+            if (charcode < 97)
+            {
+                charcode = 122 - (97 - charcode);
+            }
+            console.log(charcode);
+            resultString += String.fromCharCode(charcode);
+            console.log(resultString);
+        }
+        console.log(resultString);
+        document.getElementById("answer").innerHTML = resultString;
+    }
+</script>

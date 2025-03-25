@@ -8,13 +8,11 @@ body {
 	justify-content: center; 
     align-items: center;
 	height: 100%;
-    margin: 0;
  
 }
 body.page0 {
     background-image: url('1587646418_38-p-besshovnie-foni-dlya-saitov-112.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 100%;
 }
 
 body.page1 {
@@ -45,6 +43,8 @@ body.page3 {
 }
 
 .container {
+    position: absolute;
+    top: 50%;
     max-width: 600px;
     margin: auto;
     background: white;
@@ -60,7 +60,7 @@ h1 {
 
 .subtitle {
     font-size: 18px;
-    color: gray;
+    color: rgba(128, 128, 128, 0.47);
     margin-bottom: 20px;
 }
 
